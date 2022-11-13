@@ -1,0 +1,6 @@
+input[name="dividend"], input[name="divisor"] {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  outline: 0;
+}

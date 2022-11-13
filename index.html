@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/bb648b716e.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+  <div class="container p-5">
+    <table class="table align-middle table-dark table-hover table-striped-columns table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" class="text-end">Dividend</th>
+          <th scope="col">Divisor</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="table-content">
+        <tr>
+          <td><input type="text" placeholder="00.0" name="dividend" class="w-100 text-light text-end" onchange="formatElementValue(this)" /></td>
+          <td><input type="text" placeholder="00.0" name="divisor" class="w-100 text-light" onchange="formatElementValue(this)" /></td>
+          <th scope="row" class="text-center"><button type="button" tabindex="-1"
+              class="btn btn-sm btn-outline-danger d-none" onclick="remRow(this)"><i
+                class="fa-solid fa-trash"></i></button></th>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <button class="btn btn-secondary" onclick="calculate()"><i class="fa-solid fa-calculator"></i></button>
+        <h5 class="ms-3" id="result">Result:</h5>
+      </div>
+      <button class="btn btn-success" onclick="addRow()"><i class="fa-solid fa-plus"></i></button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
